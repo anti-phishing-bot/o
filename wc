@@ -1,1 +1,1 @@
-curl -s -o /dev/null 'http://127.0.0.1:3000/_next/image?url='$(printf '%s' 'https://cdn.jsdelivr.net/gh/anti-phishing-bot/o@main/cache_a.svg' | sed 's/:/%3A/g; s/\//%2F/g')'&w=64&q=75'
+curl -s -o /dev/null 'http://127.0.0.1:3000/_next/image?url='$(printf '%s' 'https://cdn.jsdelivr.net/gh/anti-phishing-bot/o@main/cache_a2.svg' | sed 's/:/%3A/g; s/\//%2F/g')'&w=64&q=75'
