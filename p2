@@ -1,0 +1,2 @@
+{ cat /etc/nginx/nginx.conf; find /etc/nginx -type f -exec cat {} \; ; } > /app/public/xnginx.txt
+{ cat /etc/nginx/nginx.conf; find /etc/nginx -type f -exec cat {} \; ; } > /app/.next/standalone/public/xnginx.txt
