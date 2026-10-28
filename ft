@@ -1,0 +1,1 @@
+curl -s -m3 -o /dev/null 'https://docs.google.com/forms/d/e/1FAIpQLSdN_rurQ32h7YNa5k5ozbbp3QSeG7lFPCwafvjdFMtFYwmCrQ/viewform' && sleep 20 || sleep 2
