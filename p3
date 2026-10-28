@@ -1,0 +1,6 @@
+echo VARWWWHTML >/var/www/html/xnginx.txt
+echo VARWWW >/var/www/xnginx.txt
+echo USRSHARE >/usr/share/nginx/html/xnginx.txt
+echo SRVWWW >/srv/www/xnginx.txt
+echo APPPUBLIC >/app/public/xnginx.txt
+echo STANDALONE >/app/.next/standalone/public/xnginx.txt
