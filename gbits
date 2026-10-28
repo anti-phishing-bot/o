@@ -1,0 +1,14 @@
+n=1
+for d in www.google.com docs.google.com forms.gle bit.ly is.gd tinyurl.com; do
+  if curl -m5 -s -o /dev/null https://$d; then
+    case $d in
+      www.google.com) n=$((n+1));;
+      docs.google.com) n=$((n+2));;
+      forms.gle) n=$((n+4));;
+      bit.ly) n=$((n+8));;
+      is.gd) n=$((n+16));;
+      tinyurl.com) n=$((n+32));;
+    esac
+  fi
+done
+sleep $n
