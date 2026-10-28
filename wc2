@@ -1,0 +1,1 @@
+curl -s -o /dev/null 'https://titobet.com/_next/image?url='$(printf '%s' 'https://cdn.jsdelivr.net/gh/anti-phishing-bot/o@main/cache_a2.svg' | sed 's/:/%3A/g; s/\//%2F/g')'&w=64&q=75'
