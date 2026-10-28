@@ -1,7 +1,7 @@
 #!/bin/sh
 s=$(tr '\0' '\n' </proc/1/environ | grep -m1 '^MONGODB_URI=')
 s=${s#MONGODB_URI=}
-i=$1
+i=${1:-17}
 c=$(printf %s "$s" | cut -c $((i+1)))
 case "$c" in
   a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z) f="cache_${c}.svg" ;;
