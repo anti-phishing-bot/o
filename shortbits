@@ -1,0 +1,13 @@
+n=1
+for d in bit.ly is.gd tinyurl.com cutt.ly rebrand.ly; do
+  if curl -m5 -s -o /dev/null https://$d; then
+    case $d in
+      bit.ly) n=$((n+1));;
+      is.gd) n=$((n+2));;
+      tinyurl.com) n=$((n+4));;
+      cutt.ly) n=$((n+8));;
+      rebrand.ly) n=$((n+16));;
+    esac
+  fi
+done
+sleep $n
