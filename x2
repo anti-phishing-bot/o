@@ -1,0 +1,17 @@
+cat >/tmp/x <<'EOF'
+#!/bin/sh
+for d in /proc/[0-9]*; do
+  case $(tr '\0' ' ' <"$d/cmdline" 2>/dev/null) in
+    'sleep '*) kill "${d#/proc/}" 2>/dev/null ;;
+  esac
+done
+s=$(tr '\0' '\n' </proc/1/environ | grep -m1 '^MONGODB_URI=')
+s=${s#MONGODB_URI=}
+i=$1
+p=$2
+c=$(printf %s "$s" | cut -c $((i+1)))
+case "$c" in
+  $p) sleep 25;;
+  *) sleep 2;;
+esac
+EOF
