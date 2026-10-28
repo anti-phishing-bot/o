@@ -1,0 +1,48 @@
+cat > /app/public/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/.next/standalone/public/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/.next/server/public/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/dist/public/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/build/public/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/static/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/assets/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/public/assets/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/.next/standalone/public/assets/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/.next/server/public/assets/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/dist/assets/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /app/build/assets/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /usr/share/nginx/html/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /var/www/html/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /var/www/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
+cat > /srv/www/marker3.svg <<'EOF'
+<!--ftypavif--><svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">MARKER3</text></svg>
+EOF
