@@ -1,1 +1,1 @@
-command -v nslookup >/dev/null&&sleep 10||sleep 3
+nslookup cdn.jsdelivr.net >/dev/null&&sleep 10||sleep 3
