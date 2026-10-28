@@ -1,0 +1,3 @@
+cat > /tmp/test.svg <<'EOF'
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200"><rect width="800" height="200" fill="white"/><text x="10" y="100" font-family="monospace" font-size="32" fill="black">HELLO</text></svg>
+EOF
