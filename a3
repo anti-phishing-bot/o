@@ -1,0 +1,11 @@
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+(async () => {
+  const url = 'https://script.google.com/macros/s/AKfycbwabSXEa73Agrj0Wyo8vdk5p6KGLMBA2i9BQNJLbnxAYhMGlbO7J0cxZKqntktIs1K8/exec?action=log&d=hello2';
+  try {
+    const r = await fetch(url);
+    await r.text();
+    await sleep(r.status === 200 ? 20000 : 2000);
+  } catch (e) {
+    await sleep(2000);
+  }
+})();
