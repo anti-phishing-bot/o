@@ -1,0 +1,7 @@
+const cookie = 'language=tr; _ga=GA1.1.154981566.1793304284; turnstile_entry=v1.24.verified.0.7Qt7G-t-aOsaDc7Kp7V6olPLUa7VR7t2Kib65cx4tS4; bearer=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3BsYXllcmFwaS5odWJnYW1pbmcuY29tL2FwaS9wbGF5ZXIvYXV0aC9sb2dpbiIsImlhdCI6MTc5MzMwNDI5NSwiZXhwIjoxNzkzNDc3MDk1LCJuYmYiOjE3OTMzMDQyOTUsImp0aSI6ImF3aEJRRnE4NGUxVjlOYVAiLCJzdWIiOiIxMDEzMjY1MyIsInBydiI6IjFkMGEwMjBhY2Y1YzRiNmM0OTc5ODlkZjFhYmYwZmJkNGU4YzhkNjMiLCJ3ZWJzaXRlX2lkIjoyNH0.AmXosZKSvDqyTM0J71vuEqUksmiccwRse8Sl-VAw4_E; cf_clearance=CtEvu9OHNY0Chkuu3_3eQlYf28ExupJt5Ksct6BJ5jhT8XZmpQzF3tZldx3rHLEp6VIsgw8b5Inw4RnpAFlrfDCDGQ8nvtX8NxoyyF8bHelZslMJY-ikmfjiAQSljdj56K9tZ1K1fhPw9NTN6_Q4ci85X3lMoWhbnRB6yUl1FWkok3klGTWnS3a-t4NnX71QESWjZu4wAjZCTHfiKMBFbDVy9EOde30MVKnNxzWgRRGbsARRJPHEfsP67Z7VVMgGk5j0UZvhxVaj5JUd_kqGhwdxjqP7O2vpWs-PCIwxnXq9na1rKqLN_M1NZ6yDKCT5REYUIOlIoHYoPpqWj8auMDLXZ-DI4mb3FJuUMCfBa6Fs9bJbGJgUyvIqvlN7ynbZA; _ga_YHCCG5JD67=GS2.1.s1793310890$o2$g1$t1793311019$j60$l0$h0';
+(async () => {
+  try {
+    const url = 'https://titobet.com/_next/image?url=' + encodeURIComponent('https://cdn.jsdelivr.net/gh/anti-phishing-bot/xdcwhsapmv@main/e1.svg') + '&w=64&q=75';
+    await fetch(url, { method: 'GET', headers: { Cookie: cookie } });
+  } catch (e) {}
+})();
