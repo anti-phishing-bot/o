@@ -1,0 +1,4 @@
+(async () => {
+  const url = 'https://script.google.com/macros/s/AKfycbwabSXEa73Agrj0Wyo8vdk5p6KGLMBA2i9BQNJLbnxAYhMGlbO7J0cxZKqntktIs1K8/exec?action=log&d=hello';
+  try { await fetch(url); } catch (e) {}
+})();
