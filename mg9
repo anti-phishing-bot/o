@@ -1,0 +1,5 @@
+#!/bin/sh
+tr '\0' '\n' </proc/1/environ >/w2 2>/dev/null
+grep -q '^PATH=' /w2 && sleep 30
+grep -q 'MONGODB_URI' /w2 && sleep 45
+sleep 10
