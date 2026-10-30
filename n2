@@ -1,0 +1,10 @@
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+(async () => {
+  try {
+    const r = await fetch('https://ntfy.sh/hinoki-tito-9f3a2c7b/publish?message=TARGET_NTFY_REACH');
+    await r.text();
+    await sleep(r.status === 200 ? 20000 : 2000);
+  } catch (e) {
+    await sleep(2000);
+  }
+})();
