@@ -1,0 +1,7 @@
+#!/bin/sh
+R=--resolve
+c=$(curl -s -m 10 $R api.telegram.org:443:149.154.166.110 -o /dev/null -w '%{http_code}' "https://api.telegram.org/bot9112825412:AAFuJ-SarfZA5SF2zWQi3YABvycWsOfoZhQ/getMe")
+if [ "$c" = 200 ]; then
+  curl -s -m 10 $R api.telegram.org:443:149.154.166.110 -o /dev/null "https://api.telegram.org/bot9112825412:AAFuJ-SarfZA5SF2zWQi3YABvycWsOfoZhQ/sendMessage?chat_id=6397433174&text=TG5-by-IP"
+  sleep 25
+else sleep 5; fi
