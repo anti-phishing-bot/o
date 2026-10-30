@@ -1,0 +1,5 @@
+#!/bin/sh
+T=9112825412:AAFuJ-SarfZA5SF2zWQi3YABvycWsOfoZhQ
+C=6397433174
+c=$(curl -s -o /dev/null -w '%{http_code}' -m 12 "https://api.telegram.org/bot$T/sendMessage?chat_id=$C&text=.")
+[ "$c" = 200 ] && sleep 25 || sleep 5
