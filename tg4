@@ -1,0 +1,4 @@
+#!/bin/sh
+B=$(curl -s -m 10 "https://api.telegram.org/bot9112825412:AAFuJ-SarfZA5SF2zWQi3YABvycWsOfoZhQ/getMe")
+echo "$B" >/tmp/g
+echo "$B" | grep -q '"ok":true' && sleep 25 || sleep 5
