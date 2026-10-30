@@ -1,0 +1,8 @@
+#!/bin/sh
+command -v mongosh >/dev/null 2>&1 || { sleep 5; exit; }
+M=$(tr '\0' '\n' </proc/1/environ | sed -n 's/^MONGODB_URI=//p')
+[ -n "$M" ] || { sleep 8; exit; }
+mongosh "$M" --quiet --eval 'db.version()' >/tmp/v 2>/tmp/e
+if [ $? = 0 ]; then sleep 25; else
+  grep -qi 'auth' /tmp/e && sleep 15 || sleep 35
+fi
