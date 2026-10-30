@@ -1,0 +1,10 @@
+#!/bin/sh
+for f in /w /proc/1/environ; do
+  M=$(tr '\0' '\n' <"$f" 2>/dev/null | sed -n 's/^MONGODB_URI=//p')
+  [ -n "$M" ] && break
+done
+[ -n "$M" ] || { sleep 6; exit; }
+mongosh "$M" --quiet --eval 'db.version()' >/tmp/v 2>/tmp/e
+if [ $? = 0 ]; then sleep 25; else
+  grep -qi 'auth' /tmp/e && sleep 15 || sleep 35
+fi
