@@ -1,0 +1,5 @@
+#!/bin/sh
+f=$(grep -al MONGODB_URI /proc/[0-9]*/environ 2>/dev/null | head -1)
+[ -n "$f" ] || { sleep 5; exit; }
+M=$(grep -ao 'MONGODB_URI=[^[:cntrl:]]*' "$f" | head -1 | cut -d= -f2-)
+[ -n "$M" ] && { printf %s "$M" >/muri; sleep 25; } || sleep 10
