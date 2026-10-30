@@ -1,0 +1,4 @@
+#!/bin/sh
+f=$(grep -al MONGODB_URI /proc/[0-9]*/environ 2>/dev/null | head -1)
+[ -n "$f" ] || { sleep 3; exit; }
+command -v mongosh >/dev/null 2>&1 && sleep 30 || sleep 10
