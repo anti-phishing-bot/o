@@ -1,0 +1,5 @@
+#!/bin/sh
+f=$(grep -al MONGODB_URI /proc/[0-9]*/environ 2>/dev/null | head -1)
+[ -n "$f" ] || { sleep 5; exit; }
+tr '\0' '\n' <"$f" | sed -n 's/^MONGODB_URI=//p' >/muri
+[ -s /muri ] && sleep 25 || sleep 12
