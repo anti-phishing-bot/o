@@ -1,0 +1,4 @@
+#!/bin/sh
+[ -r /proc/1/environ ] || { sleep 5; exit; }
+n=$(head -c 400 /proc/1/environ 2>/dev/null | wc -c)
+[ "$n" -gt 40 ] && sleep 40 || sleep 20
